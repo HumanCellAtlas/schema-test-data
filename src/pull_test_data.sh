@@ -52,6 +52,7 @@ if [ $valid = true ] & [ $status -lt 400 ]
 
         echo "Release of new data, $project_uuid-$today. Pushing to branch and creating PR"
 
+        cd ..
         git commit -a -m "Added new data: $project_uuid, corresponding to release on $today"
         git push origin release-data-$today
         echo "Please go to the following website and fill in the details of the PR: https://github.com/HumanCellAtlas/schema-test-data/compare/master...release-data-$today"
