@@ -38,7 +38,7 @@ if [ $valid = true ] & [ $status -lt 400 ]
         today=$( date +'%d/%m/%Y' )
         git checkout master
         git pull
-        git checkout -b release-data-$today
+        git checkout release-data-$today
 
         echo "Pushing the dataset to the branch, please make sure you have gsutil configured"
         cd $PARENTDIR
