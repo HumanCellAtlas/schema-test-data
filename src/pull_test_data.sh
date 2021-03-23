@@ -34,11 +34,9 @@ if [ $valid = true ]
 
 if [ $valid = true ] & [ $status -lt 400 ]
     then
-        echo "Creating branch for release, please make sure you are in master"
         today=$( date +'%d/%m/%Y' )
-        git checkout master
-        git pull
-        git checkout release-data-$today
+
+
 
         echo "Pushing the dataset to the branch, please make sure you have gsutil configured"
         cd $PARENTDIR
@@ -50,10 +48,14 @@ if [ $valid = true ] & [ $status -lt 400 ]
 
         gsutil -m rsync -r gs://broad-dsp-monster-hca-dev-ebi-staging/staging/$project_uuid $project_uuid
 
-        echo "Release of new data, $project_uuid-$today. Pushing to branch and creating PR"
+        echo "Release of new data, $project_uuid-$today. Adding"
 
-        cd ..
         git add .
+
+        echo "Creating a new branch with name 'release-data-$today'"
+
+        git add $PARENTDIR/.
+        git checkout -b release-data-$today
         git commit -m "Added new data: $project_uuid, corresponding to release on $today"
         git push origin release-data-$today
         echo "Please go to the following website and fill in the details of the PR: https://github.com/HumanCellAtlas/schema-test-data/compare/master...release-data-$today"
