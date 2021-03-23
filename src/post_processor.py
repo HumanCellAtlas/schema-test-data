@@ -3,6 +3,7 @@ import copy
 import json
 import os
 import uuid
+from collections import namedtuple
 from os import walk
 from shutil import copyfile
 from typing import List
@@ -16,6 +17,9 @@ METADATA_ID_KEY_BY_TYPE = {
 }
 
 ZERO_TIMESTAMP = '2021-01-01T00:00:00.000000Z'
+
+SCHEMA_PROD_URL = 'https://schema.humancellatlas.org/'
+SCHEMA_STAGING_URL = 'https://schema.staging.data.humancellatlas.org/'
 
 
 # doesn't work if path is in list
@@ -74,11 +78,6 @@ class PostProcessor:
         for file_path in json_file_paths:
             self.process_a_metadata_file(file_path)
 
-    def get_json_file_paths(self, dir_path: str):
-        file_paths = self.get_file_paths(dir_path)
-        json_file_paths = (file_path for file_path in file_paths if '.json' in file_path)
-        return json_file_paths
-
     def process_descriptors(self, dir_path: str):
         for file_path in self.get_json_file_paths(dir_path):
             self.process_descriptor(file_path)
@@ -95,6 +94,11 @@ class PostProcessor:
             new_file_path = os.path.join(new_dir_path, filename)
             os.makedirs(new_dir_path, exist_ok=True)
             copyfile(file_path, new_file_path)
+
+    def get_json_file_paths(self, dir_path: str):
+        file_paths = self.get_file_paths(dir_path)
+        json_file_paths = (file_path for file_path in file_paths if '.json' in file_path)
+        return json_file_paths
 
     def get_file_paths(self, dir_path: str) -> List[str]:
         filepaths = []
@@ -113,41 +117,25 @@ class PostProcessor:
         if schema_type not in ['project', 'biomaterial', 'process', 'protocol', 'file']:
             raise Exception(f'Invalid schema type: {schema_type}')
 
-        old_uuid, old_version = self.get_uuid_version_from_filename(filename)
-
         metadata_id = self.get_metadata_id(old_content)
         new_uuid = str(self.determine_uuid(metadata_id))
 
-        self.old_to_new_uuid_map[old_uuid] = new_uuid
-
-        new_filename = filename.replace(old_uuid, new_uuid)
-        new_filename = new_filename.replace(old_version, ZERO_TIMESTAMP)
-        new_content = self.replace_uuid_version_in_a_metadata_file(old_content, new_uuid)
+        new_filename = self.replace_metadata_filename(filename, new_uuid)
+        new_content = self.replace_metadata_file_content(old_content, new_uuid)
 
         new_dir_path = self.get_new_dir_path(dir_path)
         new_file_path = os.path.join(new_dir_path, new_filename)
         os.makedirs(new_dir_path, exist_ok=True)
         dump_json(new_content, new_file_path)
 
-    def get_uuid_version_from_filename(self, filename):
-        filename_parts = filename.split('_')
-        old_uuid = filename_parts[0]
-        old_version = filename_parts[1].replace('.json', '')
-        return old_uuid, old_version
-
     def process_link(self, file_path):
         dir_path, filename = os.path.split(file_path)
 
+        new_filename = self.replace_link_filename(filename)
+
         old_content = load_json(file_path)
-
-        old_uuid, old_version = self.get_uuid_version_from_filename(filename)
-
-        new_uuid = self.old_to_new_uuid_map.get(old_uuid)
-
-        new_filename = filename.replace(old_uuid, new_uuid)
-        new_filename = new_filename.replace(old_version, ZERO_TIMESTAMP)
-
         new_content = self.replace_uuids_in_links(old_content)
+
         new_dir_path = self.get_new_dir_path(dir_path)
         new_file_path = os.path.join(new_dir_path, new_filename)
         os.makedirs(new_dir_path, exist_ok=True)
@@ -158,7 +146,9 @@ class PostProcessor:
 
         old_content = load_json(file_path)
 
-        old_uuid, old_version = self.get_uuid_version_from_filename(filename)
+        filename_info = self.get_filename_info(filename)
+        old_uuid = filename_info.entity_uuid
+        old_version = filename_info.version
 
         new_uuid = self.old_to_new_uuid_map.get(old_uuid)
 
@@ -171,26 +161,52 @@ class PostProcessor:
         os.makedirs(new_dir_path, exist_ok=True)
         dump_json(new_content, new_file_path)
 
-    def replace_uuid_version_in_a_metadata_file(self, old_content, new_uuid):
+    def replace_metadata_filename(self, filename, new_uuid):
+        filename_info = self.get_filename_info(filename)
+        old_uuid = filename_info.entity_uuid
+        old_version = filename_info.version
+        self.old_to_new_uuid_map[old_uuid] = new_uuid
+        new_filename = filename.replace(old_uuid, new_uuid)
+        new_filename = new_filename.replace(old_version, ZERO_TIMESTAMP)
+        return new_filename
+
+    def get_filename_info(self, filename):
+        FileNameInfo = namedtuple('Filename', 'entity_uuid version project_uuid')
+
+        filename_parts = filename.split('_')
+        filename_parts_len = len(filename_parts)
+
+        if filename_parts_len == 2:
+            entity_uuid = filename_parts[0]
+            version = filename_parts[1].replace('.json', '')
+            filename_info = FileNameInfo(entity_uuid, version, None)
+        elif filename_parts_len == 3:
+            entity_uuid = filename_parts[0]
+            version = filename_parts[1]
+            project_uuid = filename_parts[2].replace('.json', '')
+            filename_info = FileNameInfo(entity_uuid, version, project_uuid)
+
+        return filename_info
+
+    def replace_link_filename(self, filename):
+        filename_info = self.get_filename_info(filename)
+        old_uuid = filename_info.entity_uuid
+        old_version = filename_info.version
+        project_uuid = filename_info.project_uuid
+        new_uuid = self.old_to_new_uuid_map.get(old_uuid)
+        new_project_uuid = self.old_to_new_uuid_map.get(project_uuid)
+        new_filename = filename.replace(old_uuid, new_uuid)
+        new_filename = new_filename.replace(project_uuid, new_project_uuid)
+        new_filename = new_filename.replace(old_version, ZERO_TIMESTAMP)
+        return new_filename
+
+    def replace_metadata_file_content(self, old_content, new_uuid):
         new_content = copy.deepcopy(old_content)
         set_key(new_content, 'provenance.document_id', new_uuid)
         set_key(new_content, 'provenance.submission_date', ZERO_TIMESTAMP)
         set_key(new_content, 'provenance.update_date', ZERO_TIMESTAMP)
+        self.replace_described_by(new_content)
         return new_content
-
-    def get_metadata_id(self, content):
-        schema_type = content.get('schema_type')
-        id_key = METADATA_ID_KEY_BY_TYPE.get(schema_type)
-        return get_key(id_key, content)
-
-    def get_new_dir_path(self, dir_path):
-        new_project_dir_path = os.path.join(self.new_dir_path, self.project_dir_name)
-        new_dir_path = dir_path.replace(self.project_dir_path, new_project_dir_path)
-        return new_dir_path
-
-    def determine_uuid(self, name):
-        # TODO can we use this namespace?
-        return uuid.uuid5(uuid.NAMESPACE_DNS, name)
 
     def replace_uuid_version_in_descriptor(self, content: dict) -> dict:
         new_content = copy.deepcopy(content)
@@ -202,10 +218,12 @@ class PostProcessor:
         new_file_uuid = str(self.determine_uuid(filename))
         new_content['file_id'] = new_file_uuid
         new_content['file_version'] = ZERO_TIMESTAMP
+        self.replace_described_by(new_content)
         return new_content
 
     def replace_uuids_in_links(self, content: dict):
         new_content = copy.deepcopy(content)
+        self.replace_described_by(new_content)
         for link in new_content.get('links', []):
             if link.get('link_type') == 'process_link':
                 old_process_uuid = link['process_id']
@@ -233,6 +251,25 @@ class PostProcessor:
                     file['file_id'] = new_file_uuid
 
         return new_content
+
+    def replace_described_by(self, new_content):
+        described_by = get_key('describedBy', new_content)
+        new_described_by = described_by.replace(SCHEMA_PROD_URL, SCHEMA_STAGING_URL)
+        set_key(new_content, 'describedBy', new_described_by)
+
+    def get_metadata_id(self, content):
+        schema_type = content.get('schema_type')
+        id_key = METADATA_ID_KEY_BY_TYPE.get(schema_type)
+        return get_key(id_key, content)
+
+    def get_new_dir_path(self, dir_path):
+        new_project_dir_path = os.path.join(self.new_dir_path, self.project_dir_name)
+        new_dir_path = dir_path.replace(self.project_dir_path, new_project_dir_path)
+        return new_dir_path
+
+    def determine_uuid(self, name):
+        # TODO can we use this namespace?
+        return uuid.uuid5(uuid.NAMESPACE_DNS, name)
 
     def find_new_uuid(self, old_uuid: str):
         new_uuid = self.old_to_new_uuid_map.get(old_uuid)
