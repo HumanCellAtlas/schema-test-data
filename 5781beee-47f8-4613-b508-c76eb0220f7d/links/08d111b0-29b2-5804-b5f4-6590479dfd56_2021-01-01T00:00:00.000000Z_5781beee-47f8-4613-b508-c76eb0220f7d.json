@@ -1,0 +1,146 @@
+{
+    "describedBy": "https://schema.staging.data.humancellatlas.org/system/3.0.0/links",
+    "links": [
+        {
+            "inputs": [
+                {
+                    "input_id": "198c7035-bde1-56dd-a9f3-2c3f63226fd9",
+                    "input_type": "cell_suspension"
+                },
+                {
+                    "input_id": "fc4a8b6c-3201-51ec-99c2-f094e93377ef",
+                    "input_type": "cell_suspension"
+                }
+            ],
+            "link_type": "process_link",
+            "outputs": [
+                {
+                    "output_id": "d47cd43f-0d66-58a1-b819-a49d822bb09d",
+                    "output_type": "analysis_file"
+                }
+            ],
+            "process_id": "08d111b0-29b2-5804-b5f4-6590479dfd56",
+            "process_type": "process",
+            "protocols": [
+                {
+                    "protocol_id": "9791e218-c594-44e2-857a-b177e457c26f",
+                    "protocol_type": "analysis_protocol"
+                },
+                {
+                    "protocol_id": "35ea55ac-cc22-4986-a865-41e92e469984",
+                    "protocol_type": "library_preparation_protocol"
+                },
+                {
+                    "protocol_id": "f8aecbd7-e9e5-4aaa-a50f-22be52abc4bf",
+                    "protocol_type": "library_preparation_protocol"
+                },
+                {
+                    "protocol_id": "b72e259c-cfc9-4cea-ab10-97531c8af893",
+                    "protocol_type": "library_preparation_protocol"
+                }
+            ]
+        },
+        {
+            "inputs": [
+                {
+                    "input_id": "1c67870d-534e-5d5e-b278-14f5765f6ceb",
+                    "input_type": "specimen_from_organism"
+                }
+            ],
+            "link_type": "process_link",
+            "outputs": [
+                {
+                    "output_id": "198c7035-bde1-56dd-a9f3-2c3f63226fd9",
+                    "output_type": "cell_suspension"
+                }
+            ],
+            "process_id": "d73c51ac-89c1-59f7-bb97-d4f725dc3bd4",
+            "process_type": "process",
+            "protocols": [
+                {
+                    "protocol_id": "843a91b0-1682-4cb8-bec5-ac37f8189915",
+                    "protocol_type": "dissociation_protocol"
+                },
+                {
+                    "protocol_id": "67f49fea-67b1-49e8-a067-573a80d220a1",
+                    "protocol_type": "enrichment_protocol"
+                }
+            ]
+        },
+        {
+            "inputs": [
+                {
+                    "input_id": "8d2ca5dd-46e5-5483-96d6-8402ee3a9d9e",
+                    "input_type": "donor_organism"
+                }
+            ],
+            "link_type": "process_link",
+            "outputs": [
+                {
+                    "output_id": "1c67870d-534e-5d5e-b278-14f5765f6ceb",
+                    "output_type": "specimen_from_organism"
+                }
+            ],
+            "process_id": "86ad5905-91f8-585c-a006-00f820ebcabe",
+            "process_type": "process",
+            "protocols": [
+                {
+                    "protocol_id": "b1881005-b1d3-4327-9dc0-3811b0376b8d",
+                    "protocol_type": "collection_protocol"
+                }
+            ]
+        },
+        {
+            "inputs": [
+                {
+                    "input_id": "7f7367d9-0fa9-545f-86cd-313146a9dc1a",
+                    "input_type": "specimen_from_organism"
+                }
+            ],
+            "link_type": "process_link",
+            "outputs": [
+                {
+                    "output_id": "fc4a8b6c-3201-51ec-99c2-f094e93377ef",
+                    "output_type": "cell_suspension"
+                }
+            ],
+            "process_id": "b4924c26-7e8e-5bf1-948b-5ae4e6ab9433",
+            "process_type": "process",
+            "protocols": [
+                {
+                    "protocol_id": "843a91b0-1682-4cb8-bec5-ac37f8189915",
+                    "protocol_type": "dissociation_protocol"
+                },
+                {
+                    "protocol_id": "67f49fea-67b1-49e8-a067-573a80d220a1",
+                    "protocol_type": "enrichment_protocol"
+                }
+            ]
+        },
+        {
+            "inputs": [
+                {
+                    "input_id": "c2222b01-31c6-5133-9311-9b769ada4fea",
+                    "input_type": "donor_organism"
+                }
+            ],
+            "link_type": "process_link",
+            "outputs": [
+                {
+                    "output_id": "7f7367d9-0fa9-545f-86cd-313146a9dc1a",
+                    "output_type": "specimen_from_organism"
+                }
+            ],
+            "process_id": "74a27c19-af29-5bc2-a58d-9e56d158ecc8",
+            "process_type": "process",
+            "protocols": [
+                {
+                    "protocol_id": "b1881005-b1d3-4327-9dc0-3811b0376b8d",
+                    "protocol_type": "collection_protocol"
+                }
+            ]
+        }
+    ],
+    "schema_type": "links",
+    "schema_version": "3.0.0"
+}
