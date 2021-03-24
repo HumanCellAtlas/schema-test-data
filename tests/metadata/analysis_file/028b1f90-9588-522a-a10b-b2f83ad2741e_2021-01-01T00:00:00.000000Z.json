@@ -1,5 +1,5 @@
 {
-    "describedBy": "https://schema.staging.data.humancellatlas.org/type/file/6.2.0/analysis_file",
+    "describedBy": "https://schema.staging.data.humancellatlas.org/type/file/6.3.0/analysis_file",
     "file_core": {
         "content_description": [
             {
@@ -9,12 +9,14 @@
             }
         ],
         "file_name": "Combined_file.zip",
+        "file_source": "Contributor",
         "format": ".zip"
     },
+    "matrix_cell_count": 500000,
     "provenance": {
         "document_id": "028b1f90-9588-522a-a10b-b2f83ad2741e",
         "schema_major_version": 6,
-        "schema_minor_version": 2,
+        "schema_minor_version": 3,
         "submission_date": "2021-01-01T00:00:00.000000Z",
         "update_date": "2021-01-01T00:00:00.000000Z"
     },

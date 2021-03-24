@@ -23,19 +23,19 @@
             "process_type": "process",
             "protocols": [
                 {
-                    "protocol_id": "9791e218-c594-44e2-857a-b177e457c26f",
+                    "protocol_id": "74538169-2440-4838-9bc0-ada561001834",
                     "protocol_type": "analysis_protocol"
                 },
                 {
-                    "protocol_id": "35ea55ac-cc22-4986-a865-41e92e469984",
+                    "protocol_id": "7091f16f-b882-4249-9d28-c2a3453f1b4f",
                     "protocol_type": "library_preparation_protocol"
                 },
                 {
-                    "protocol_id": "f8aecbd7-e9e5-4aaa-a50f-22be52abc4bf",
+                    "protocol_id": "cb0987ca-cb39-4c99-bda6-a061a6cb6ed6",
                     "protocol_type": "library_preparation_protocol"
                 },
                 {
-                    "protocol_id": "b72e259c-cfc9-4cea-ab10-97531c8af893",
+                    "protocol_id": "0406d22c-c46f-4e31-9643-eb73053a5867",
                     "protocol_type": "library_preparation_protocol"
                 }
             ]
@@ -58,11 +58,11 @@
             "process_type": "process",
             "protocols": [
                 {
-                    "protocol_id": "843a91b0-1682-4cb8-bec5-ac37f8189915",
+                    "protocol_id": "4129c9a4-8ee1-4dd3-9774-91c759e78f76",
                     "protocol_type": "dissociation_protocol"
                 },
                 {
-                    "protocol_id": "67f49fea-67b1-49e8-a067-573a80d220a1",
+                    "protocol_id": "32f5c0dd-6d43-43ae-8974-ae7769e5c36d",
                     "protocol_type": "enrichment_protocol"
                 }
             ]
@@ -85,7 +85,7 @@
             "process_type": "process",
             "protocols": [
                 {
-                    "protocol_id": "b1881005-b1d3-4327-9dc0-3811b0376b8d",
+                    "protocol_id": "51e2ff2d-2c97-4fcd-ae55-db875d01bafb",
                     "protocol_type": "collection_protocol"
                 }
             ]
@@ -108,11 +108,11 @@
             "process_type": "process",
             "protocols": [
                 {
-                    "protocol_id": "843a91b0-1682-4cb8-bec5-ac37f8189915",
+                    "protocol_id": "4129c9a4-8ee1-4dd3-9774-91c759e78f76",
                     "protocol_type": "dissociation_protocol"
                 },
                 {
-                    "protocol_id": "67f49fea-67b1-49e8-a067-573a80d220a1",
+                    "protocol_id": "32f5c0dd-6d43-43ae-8974-ae7769e5c36d",
                     "protocol_type": "enrichment_protocol"
                 }
             ]
@@ -135,7 +135,7 @@
             "process_type": "process",
             "protocols": [
                 {
-                    "protocol_id": "b1881005-b1d3-4327-9dc0-3811b0376b8d",
+                    "protocol_id": "51e2ff2d-2c97-4fcd-ae55-db875d01bafb",
                     "protocol_type": "collection_protocol"
                 }
             ]

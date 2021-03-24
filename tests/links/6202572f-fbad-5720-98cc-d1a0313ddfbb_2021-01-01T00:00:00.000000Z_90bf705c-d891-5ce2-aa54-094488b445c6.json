@@ -19,11 +19,11 @@
             "process_type": "process",
             "protocols": [
                 {
-                    "protocol_id": "9791e218-c594-44e2-857a-b177e457c26f",
+                    "protocol_id": "74538169-2440-4838-9bc0-ada561001834",
                     "protocol_type": "analysis_protocol"
                 },
                 {
-                    "protocol_id": "35ea55ac-cc22-4986-a865-41e92e469984",
+                    "protocol_id": "7091f16f-b882-4249-9d28-c2a3453f1b4f",
                     "protocol_type": "library_preparation_protocol"
                 }
             ]
@@ -46,15 +46,15 @@
             "process_type": "process",
             "protocols": [
                 {
-                    "protocol_id": "843a91b0-1682-4cb8-bec5-ac37f8189915",
+                    "protocol_id": "4129c9a4-8ee1-4dd3-9774-91c759e78f76",
                     "protocol_type": "dissociation_protocol"
                 },
                 {
-                    "protocol_id": "5dd83852-6ba8-4826-b88b-011135c57da2",
+                    "protocol_id": "4283ea7a-1573-4099-b775-9bc9fc7bc568",
                     "protocol_type": "enrichment_protocol"
                 },
                 {
-                    "protocol_id": "98ad3eca-e857-4ba9-9b29-234c82bb30ae",
+                    "protocol_id": "264ab291-64ed-47f6-ae7d-45b672993720",
                     "protocol_type": "enrichment_protocol"
                 }
             ]
@@ -77,7 +77,7 @@
             "process_type": "process",
             "protocols": [
                 {
-                    "protocol_id": "efe5fd2b-f71f-4e20-aec2-d2941cc13de9",
+                    "protocol_id": "090b56a3-6c30-411d-843a-07bd31e3a96e",
                     "protocol_type": "collection_protocol"
                 }
             ]

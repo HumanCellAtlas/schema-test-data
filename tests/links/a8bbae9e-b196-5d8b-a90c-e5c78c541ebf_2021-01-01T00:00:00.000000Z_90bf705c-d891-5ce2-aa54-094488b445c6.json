@@ -19,11 +19,11 @@
             "process_type": "process",
             "protocols": [
                 {
-                    "protocol_id": "9791e218-c594-44e2-857a-b177e457c26f",
+                    "protocol_id": "74538169-2440-4838-9bc0-ada561001834",
                     "protocol_type": "analysis_protocol"
                 },
                 {
-                    "protocol_id": "f8aecbd7-e9e5-4aaa-a50f-22be52abc4bf",
+                    "protocol_id": "cb0987ca-cb39-4c99-bda6-a061a6cb6ed6",
                     "protocol_type": "library_preparation_protocol"
                 }
             ]
@@ -46,7 +46,7 @@
             "process_type": "process",
             "protocols": [
                 {
-                    "protocol_id": "1d57448f-a809-45ac-ba5a-56bc6d78a678",
+                    "protocol_id": "ce9862ab-85af-4acb-8649-d74543ca07b0",
                     "protocol_type": "collection_protocol"
                 }
             ]

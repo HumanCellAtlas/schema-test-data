@@ -19,11 +19,11 @@
             "process_type": "process",
             "protocols": [
                 {
-                    "protocol_id": "9791e218-c594-44e2-857a-b177e457c26f",
+                    "protocol_id": "74538169-2440-4838-9bc0-ada561001834",
                     "protocol_type": "analysis_protocol"
                 },
                 {
-                    "protocol_id": "b72e259c-cfc9-4cea-ab10-97531c8af893",
+                    "protocol_id": "0406d22c-c46f-4e31-9643-eb73053a5867",
                     "protocol_type": "library_preparation_protocol"
                 }
             ]
