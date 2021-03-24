@@ -1,0 +1,57 @@
+{
+    "describedBy": "https://schema.staging.data.humancellatlas.org/system/3.0.0/links",
+    "links": [
+        {
+            "inputs": [
+                {
+                    "input_id": "3bee0c9a-aced-52f2-b97f-89518f826b36",
+                    "input_type": "specimen_from_organism"
+                }
+            ],
+            "link_type": "process_link",
+            "outputs": [
+                {
+                    "output_id": "f0c8ac7c-1c4a-5c9c-9286-c8b16208f9ae",
+                    "output_type": "analysis_file"
+                }
+            ],
+            "process_id": "a8bbae9e-b196-5d8b-a90c-e5c78c541ebf",
+            "process_type": "process",
+            "protocols": [
+                {
+                    "protocol_id": "9791e218-c594-44e2-857a-b177e457c26f",
+                    "protocol_type": "analysis_protocol"
+                },
+                {
+                    "protocol_id": "f8aecbd7-e9e5-4aaa-a50f-22be52abc4bf",
+                    "protocol_type": "library_preparation_protocol"
+                }
+            ]
+        },
+        {
+            "inputs": [
+                {
+                    "input_id": "5bc2bf2f-eb98-5510-a386-172cef38f2f2",
+                    "input_type": "donor_organism"
+                }
+            ],
+            "link_type": "process_link",
+            "outputs": [
+                {
+                    "output_id": "3bee0c9a-aced-52f2-b97f-89518f826b36",
+                    "output_type": "specimen_from_organism"
+                }
+            ],
+            "process_id": "e9edb24e-6b8c-5cb0-b56e-3dd7fb8f4a83",
+            "process_type": "process",
+            "protocols": [
+                {
+                    "protocol_id": "1d57448f-a809-45ac-ba5a-56bc6d78a678",
+                    "protocol_type": "collection_protocol"
+                }
+            ]
+        }
+    ],
+    "schema_type": "links",
+    "schema_version": "3.0.0"
+}
