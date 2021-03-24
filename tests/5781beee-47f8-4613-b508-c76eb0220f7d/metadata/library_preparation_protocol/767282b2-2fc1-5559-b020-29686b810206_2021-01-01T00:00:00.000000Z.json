@@ -1,0 +1,37 @@
+{
+    "cell_barcode": {
+        "barcode_length": 16,
+        "barcode_offset": 0,
+        "barcode_read": "Read 1"
+    },
+    "describedBy": "https://schema.humancellatlas.org/type/protocol/sequencing/6.2.0/library_preparation_protocol",
+    "end_bias": "3 prime tag",
+    "input_nucleic_acid_molecule": {
+        "text": "polyA RNA"
+    },
+    "library_construction_method": {
+        "ontology": "EFO:0009898",
+        "ontology_label": "10x v3 sequencing",
+        "text": "10xV3"
+    },
+    "nucleic_acid_source": "single cell",
+    "protocol_core": {
+        "protocol_description": "Half a million viable cells were resuspended in 25 \u0152\u00bal of FACS buffer and incubated with 2.5 \u0152\u00bal of Human TruStain FcX\u201a\u00d1\u00a2 Fc Blocking Reagent (BioLegend 422302) for 10 min at 4oC. The TotalSeq-C\u201a\u00d1\u00a2 antibody cocktail (BioLegend 99813) was centrifuged at 14,000g at 4\u02daC for 1 min, resuspended in 52ul of FACS buffer, incubated at room temperature for 5 minutes and centrifuged at 14,000g at 4\u00ac\u221eC for 10 min. 25ul were subsequently added to each sample pool and incubated for 30 min at 4\u02daC in the dark. Pools were washed 3 times with 27 volumes (1.4 ml) of FACS buffer, followed by centrifugation at 500 g for 5 minutes. The pellet was resuspended in 62.5 \u00b5l of 1 x PBS + 0.04 % BSA (Ambion, #AM2616), filtered through a 40 \u0152\u00bam cell strainer (Flowmi  H13680-0040) and the viability of each sample pool was assessed. 50,000 live cells (up to a maximum of 60,000 total cells) for each pool were processed using Single Cell VDJ 5' version 1.1 (1000020) together with Single Cell 5' Feature Barcode library kit (1000080), Single Cell V(D)J Enrichment Kit, Human B Cells (1000016) and Single Cell V(D)J Enrichment Kit, Human T Cells (1000005) (10x Genomics) according to the manufacturer's protocols. The samples were subjected to 12 cycles of cDNA amplification and 8 cycles for the cell surface protein library construction. Following this, the libraries were processed according to the manufacturer's protocol. Libraries were pooled per sample using a ratio 9:2.4:1:0.6 for gene expression, cell surface, TCR enriched and BCR enriched libraries.",
+        "protocol_id": "Cambridge_LibraryPrep",
+        "protocol_name": "Cambridge SingleCell VDJ 5' 1.1"
+    },
+    "provenance": {
+        "document_id": "767282b2-2fc1-5559-b020-29686b810206",
+        "schema_major_version": 6,
+        "schema_minor_version": 2,
+        "submission_date": "2021-01-01T00:00:00.000000Z",
+        "update_date": "2021-01-01T00:00:00.000000Z"
+    },
+    "schema_type": "protocol",
+    "strand": "first",
+    "umi_barcode": {
+        "barcode_length": 12,
+        "barcode_offset": 16,
+        "barcode_read": "Read 1"
+    }
+}

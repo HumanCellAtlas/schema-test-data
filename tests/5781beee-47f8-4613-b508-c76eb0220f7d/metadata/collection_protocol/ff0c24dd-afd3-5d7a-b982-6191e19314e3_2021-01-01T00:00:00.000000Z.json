@@ -1,0 +1,20 @@
+{
+    "describedBy": "https://schema.humancellatlas.org/type/protocol/biomaterial_collection/9.2.0/collection_protocol",
+    "method": {
+        "ontology": "EFO:0009121",
+        "ontology_label": "blood draw",
+        "text": "blood draw"
+    },
+    "protocol_core": {
+        "protocol_description": "For the COVID-19 positive samples and healthy controls, peripheral blood was collected in EDTA tubes and serum separator tubes and processed within 4 h of collection. For the IV-LPS control samples: LPS was obtained from Clinical Center Reference Endotoxin (Lots 94332B1 donated by National Institute of Health, Bethesda, Maryland, USA) and injected intravenously as a bolus dose of 2 ng/kg. Blood samples were taken prior to IV LPS administration (baseline) and at 90 min, and 10 h post challenge. Venous blood was drawn from an 18g venous cannula and was collected into EDTA and serum separator tubes. Only samples from 90 min and 10 h were analysed in this study.",
+        "protocol_id": "Newcastle_Collection"
+    },
+    "provenance": {
+        "document_id": "ff0c24dd-afd3-5d7a-b982-6191e19314e3",
+        "schema_major_version": 9,
+        "schema_minor_version": 2,
+        "submission_date": "2021-01-01T00:00:00.000000Z",
+        "update_date": "2021-01-01T00:00:00.000000Z"
+    },
+    "schema_type": "protocol"
+}
