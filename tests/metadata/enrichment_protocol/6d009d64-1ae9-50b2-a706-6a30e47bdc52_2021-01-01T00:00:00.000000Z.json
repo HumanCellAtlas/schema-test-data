@@ -1,0 +1,21 @@
+{
+    "describedBy": "https://schema.staging.data.humancellatlas.org/type/protocol/biomaterial_collection/3.1.0/enrichment_protocol",
+    "maximum_size": 30.0,
+    "method": {
+        "ontology": "EFO:0009337",
+        "ontology_label": "cell size selection",
+        "text": "cell size selection"
+    },
+    "protocol_core": {
+        "protocol_description": "Resuspended cells were passed through a 30um filter and counted prior to live cell MACS enrichment with the Dead cell removal kit (Miltenyi Biotech) as per manufacturer's instructions. Cell pellets were resuspended in microbeads and incubated at room temperature for 15 minutes. Each stained sample was passed through an LS column (Miltenyi Biotec) and rinsed with Binding buffer (Miltenyi Biotec) before centrifugation. Cell pellets were resuspended in Wash buffer and counted for CITE-seq antibody staining.",
+        "protocol_id": "Newcastle_Enrichment_Size"
+    },
+    "provenance": {
+        "document_id": "6d009d64-1ae9-50b2-a706-6a30e47bdc52",
+        "schema_major_version": 3,
+        "schema_minor_version": 1,
+        "submission_date": "2021-01-01T00:00:00.000000Z",
+        "update_date": "2021-01-01T00:00:00.000000Z"
+    },
+    "schema_type": "protocol"
+}
