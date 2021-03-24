@@ -240,6 +240,11 @@ class PostProcessor:
                     new_output_uuid = self.find_new_uuid(old_output_uuid)
                     output['output_id'] = new_output_uuid
 
+                for protocol in link.get('protocols'):
+                    old_output_uuid = protocol['output_id']
+                    new_output_uuid = self.find_new_uuid(old_output_uuid)
+                    output['protocol_id'] = new_output_uuid
+
             if link.get('link_type') == 'supplementary_file_link':
                 entity = link.get('entity')
                 old_entity_uuid = entity['entity_id']
