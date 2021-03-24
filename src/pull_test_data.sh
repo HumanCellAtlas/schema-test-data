@@ -60,7 +60,7 @@ if [ $valid = true ] & [ $status -lt 400 ]
 
         git add $PARENTDIR/.
         git checkout -b release-data-$today
-        git commit -m "Added new data: $project_uuid, corresponding to release on $today"
+        git commit -m "Added new data, corresponding to release on $today"
         git push origin release-data-$today
         echo "Please go to the following website and fill in the details of the PR: https://github.com/HumanCellAtlas/schema-test-data/compare/master...release-data-$today"
 
