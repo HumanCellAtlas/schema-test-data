@@ -1,0 +1,34 @@
+{
+    "describedBy": "https://schema.staging.data.humancellatlas.org/system/3.0.0/links",
+    "links": [
+        {
+            "inputs": [
+                {
+                    "input_id": "2d7b50d8-cd06-5408-9fde-1faed01c9ab2",
+                    "input_type": "donor_organism"
+                }
+            ],
+            "link_type": "process_link",
+            "outputs": [
+                {
+                    "output_id": "caf6d2a8-2272-5689-b3d8-9c97370d6c29",
+                    "output_type": "analysis_file"
+                }
+            ],
+            "process_id": "109fc3ad-094b-56a3-9af1-73b3b3ab4154",
+            "process_type": "process",
+            "protocols": [
+                {
+                    "protocol_id": "74538169-2440-4838-9bc0-ada561001834",
+                    "protocol_type": "analysis_protocol"
+                },
+                {
+                    "protocol_id": "0406d22c-c46f-4e31-9643-eb73053a5867",
+                    "protocol_type": "library_preparation_protocol"
+                }
+            ]
+        }
+    ],
+    "schema_type": "links",
+    "schema_version": "3.0.0"
+}

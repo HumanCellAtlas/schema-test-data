@@ -45,7 +45,7 @@ if [ $valid = true ] & [ $status -lt 400 ]
             mkdir tests
         fi
         cd tests
-        if [! -d $project_uuid ]
+        if [! -d "$project_uuid" ]
         then
             mkdir $project_uuid
         fi

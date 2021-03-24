@@ -1,0 +1,24 @@
+{
+    "describedBy": "https://schema.staging.data.humancellatlas.org/type/file/6.3.0/analysis_file",
+    "file_core": {
+        "content_description": [
+            {
+                "ontology": "data:2655",
+                "ontology_label": "cell type identifier",
+                "text": "cell type identifier"
+            }
+        ],
+        "file_name": "Annotation_File.csv",
+        "file_source": "Contributor",
+        "format": ".csv"
+    },
+    "matrix_cell_count": 0,
+    "provenance": {
+        "document_id": "d47cd43f-0d66-58a1-b819-a49d822bb09d",
+        "schema_major_version": 6,
+        "schema_minor_version": 3,
+        "submission_date": "2021-01-01T00:00:00.000000Z",
+        "update_date": "2021-01-01T00:00:00.000000Z"
+    },
+    "schema_type": "file"
+}

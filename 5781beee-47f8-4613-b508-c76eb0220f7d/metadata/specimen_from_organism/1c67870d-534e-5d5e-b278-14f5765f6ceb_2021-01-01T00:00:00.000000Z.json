@@ -1,0 +1,37 @@
+{
+    "biomaterial_core": {
+        "biomaterial_id": "AP4_specimen",
+        "biomaterial_name": "AP4_specimen",
+        "ncbi_taxon_id": [
+            9606
+        ]
+    },
+    "describedBy": "https://schema.staging.data.humancellatlas.org/type/biomaterial/10.4.0/specimen_from_organism",
+    "diseases": [
+        {
+            "ontology": "MONDO:0100096",
+            "ontology_label": "COVID-19",
+            "text": "COVID-19"
+        }
+    ],
+    "genus_species": [
+        {
+            "ontology": "NCBITaxon:9606",
+            "ontology_label": "Homo sapiens",
+            "text": "Homo sapiens"
+        }
+    ],
+    "organ": {
+        "ontology": "UBERON:0000178",
+        "ontology_label": "blood",
+        "text": "blood"
+    },
+    "provenance": {
+        "document_id": "1c67870d-534e-5d5e-b278-14f5765f6ceb",
+        "schema_major_version": 10,
+        "schema_minor_version": 4,
+        "submission_date": "2021-01-01T00:00:00.000000Z",
+        "update_date": "2021-01-01T00:00:00.000000Z"
+    },
+    "schema_type": "biomaterial"
+}
