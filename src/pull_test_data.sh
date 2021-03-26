@@ -61,7 +61,9 @@ if [ $valid = true ] & [ $status -lt 400 ]
 
         rm -r ../tests
 
-        mv tests ../tests
+        mkdir ../tests
+
+        mv temp_data/* ../tests/
 
         cd ..
 
