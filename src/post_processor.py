@@ -214,16 +214,22 @@ class PostProcessor:
 
     def replace_link_filename(self, filename):
         filename_info = self.get_filename_info(filename)
-        old_uuid = filename_info.entity_uuid
-        old_version = filename_info.version
+        old_process_uuid = filename_info.entity_uuid
+        old_process_version = filename_info.version
         project_uuid = filename_info.project_uuid
-        new_uuid = self.find_new_uuid(old_uuid)
-        new_uuid = self.find_new_uuid(new_uuid)
-        new_project_uuid = self.old_to_new_uuid_map.get(project_uuid)
-        new_filename = filename.replace(old_uuid, new_uuid)
+
+        new_process_uuid = self.find_new_process_uuid(old_process_uuid)
+        new_project_uuid = self.find_new_uuid(project_uuid)
+
+        new_filename = filename.replace(old_process_uuid, new_process_uuid)
         new_filename = new_filename.replace(project_uuid, new_project_uuid)
-        new_filename = new_filename.replace(old_version, ZERO_TIMESTAMP)
+        new_filename = new_filename.replace(old_process_version, ZERO_TIMESTAMP)
         return new_filename
+
+    def find_new_process_uuid(self, old_process_uuid):
+        uuid_from_process_id = self.find_new_uuid(old_process_uuid)
+        uuid_from_all_ids = self.find_new_uuid(uuid_from_process_id)
+        return uuid_from_all_ids
 
     def replace_metadata_file_content(self, old_content, new_uuid):
         new_content = copy.deepcopy(old_content)
