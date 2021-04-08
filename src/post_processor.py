@@ -126,13 +126,18 @@ class PostProcessor:
         metadata_id = self.get_metadata_id(old_content)
         new_uuid = str(self.determine_uuid(metadata_id))
 
+
         new_filename = self.replace_metadata_filename(filename, new_uuid)
         new_content = self.replace_metadata_file_content(old_content, new_uuid)
 
         new_dir_path = self.get_new_dir_path(dir_path)
         new_file_path = os.path.join(new_dir_path, new_filename)
         os.makedirs(new_dir_path, exist_ok=True)
-        dump_json(new_content, new_file_path)
+
+        # TODO the process metadata files will be processed later
+        #  refactor this
+        if schema_type != 'process':
+            dump_json(new_content, new_file_path)
 
     def process_link(self, file_path):
         dir_path, filename = os.path.split(file_path)
