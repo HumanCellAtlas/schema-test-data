@@ -71,6 +71,7 @@ class PostProcessor:
         self.process_metadata(f'{self.project_dir_path}/metadata')
         self.process_descriptors(f'{self.project_dir_path}/descriptors')
         self.process_links(f'{self.project_dir_path}/links')
+        self.process_processes(f'{self.project_dir_path}/metadata/process')
         self.copy_files(f'{self.project_dir_path}/data')
 
     def process_metadata(self, dir_path: str):
@@ -85,6 +86,11 @@ class PostProcessor:
     def process_links(self, dir_path: str):
         for file_path in self.get_json_file_paths(dir_path):
             self.process_link(file_path)
+
+    def process_processes(self, param):
+        json_file_paths = self.get_json_file_paths(param)
+        for file_path in json_file_paths:
+            self.process_process_metadata(file_path)
 
     def copy_files(self, dir_path: str):
         file_paths = self.get_file_paths(dir_path)
@@ -131,11 +137,10 @@ class PostProcessor:
     def process_link(self, file_path):
         dir_path, filename = os.path.split(file_path)
 
-        new_filename = self.replace_link_filename(filename)
-
         old_content = load_json(file_path)
         new_content = self.replace_uuids_in_links(old_content)
 
+        new_filename = self.replace_link_filename(filename)
         new_dir_path = self.get_new_dir_path(dir_path)
         new_file_path = os.path.join(new_dir_path, new_filename)
         os.makedirs(new_dir_path, exist_ok=True)
@@ -160,6 +165,25 @@ class PostProcessor:
         new_file_path = os.path.join(new_dir_path, new_filename)
         os.makedirs(new_dir_path, exist_ok=True)
         dump_json(new_content, new_file_path)
+
+    def process_process_metadata(self, file_path):
+        dir_path, filename = os.path.split(file_path)
+
+        old_content = load_json(file_path)
+        schema_type = old_content.get('schema_type')
+
+        if schema_type == 'process':
+            metadata_id = self.get_metadata_id(old_content)
+            uuid_from_process_id = str(self.determine_uuid(metadata_id))
+            new_uuid = self.old_to_new_uuid_map.get(uuid_from_process_id)
+
+            new_filename = self.replace_metadata_filename(filename, new_uuid)
+            new_content = self.replace_metadata_file_content(old_content, new_uuid)
+
+            new_dir_path = self.get_new_dir_path(dir_path)
+            new_file_path = os.path.join(new_dir_path, new_filename)
+            os.makedirs(new_dir_path, exist_ok=True)
+            dump_json(new_content, new_file_path)
 
     def replace_metadata_filename(self, filename, new_uuid):
         filename_info = self.get_filename_info(filename)
@@ -193,7 +217,8 @@ class PostProcessor:
         old_uuid = filename_info.entity_uuid
         old_version = filename_info.version
         project_uuid = filename_info.project_uuid
-        new_uuid = self.old_to_new_uuid_map.get(old_uuid)
+        new_uuid = self.find_new_uuid(old_uuid)
+        new_uuid = self.find_new_uuid(new_uuid)
         new_project_uuid = self.old_to_new_uuid_map.get(project_uuid)
         new_filename = filename.replace(old_uuid, new_uuid)
         new_filename = new_filename.replace(project_uuid, new_project_uuid)
@@ -226,10 +251,6 @@ class PostProcessor:
         self.replace_described_by(new_content)
         for link in new_content.get('links', []):
             if link.get('link_type') == 'process_link':
-                old_process_uuid = link['process_id']
-                new_process_uuid = self.find_new_uuid(old_process_uuid)
-                link['process_id'] = new_process_uuid
-
                 for input in link.get('inputs'):
                     old_input_uuid = input['input_id']
                     new_input_uuid = self.find_new_uuid(old_input_uuid)
@@ -245,6 +266,12 @@ class PostProcessor:
                     new_protocol_id = self.find_new_uuid(old_protocol_id)
                     protocol['protocol_id'] = new_protocol_id
 
+                old_process_uuid = link['process_id']
+                uuid_from_process_id = self.find_new_uuid(old_process_uuid)
+                new_process_uuid = self.determine_process_uuid(link)
+                link['process_id'] = new_process_uuid
+                self.old_to_new_uuid_map[uuid_from_process_id] = new_process_uuid
+
             if link.get('link_type') == 'supplementary_file_link':
                 entity = link.get('entity')
                 old_entity_uuid = entity['entity_id']
@@ -256,6 +283,20 @@ class PostProcessor:
                     file['file_id'] = new_file_uuid
 
         return new_content
+
+    def determine_process_uuid(self, link):
+        input_ids = [input['input_id'] for input in link.get('inputs')]
+        output_ids = [output['output_id'] for output in link.get('outputs')]
+        protocol_ids = [protocol['protocol_id'] for protocol in link.get('protocols')]
+
+        input_ids.sort()
+        output_ids.sort()
+        protocol_ids.sort()
+
+        merge_ids = '|I|' + ','.join(input_ids) + '|P|' + ','.join(output_ids) + '|O|' + ','.join(protocol_ids)
+        new_process_uuid = str(self.determine_uuid(merge_ids))
+
+        return new_process_uuid
 
     def replace_described_by(self, new_content):
         described_by = get_key('describedBy', new_content)
