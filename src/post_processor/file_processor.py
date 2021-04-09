@@ -212,6 +212,5 @@ class ProcessMetadataProcessor(MetadataProcessor):
         self.replace_process_ids(json_file)
 
     def replace_process_ids(self, json_file: JsonFile):
-        new_content = copy.deepcopy(json_file.new_content)
-        json_file.new_content = set_key(new_content, 'process_core.process_id', 'dummy_process')
+        json_file.new_content = set_key(json_file.new_content, 'process_core.process_id', 'dummy_process')
 
