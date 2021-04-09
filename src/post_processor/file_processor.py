@@ -209,3 +209,9 @@ class ProcessMetadataProcessor(MetadataProcessor):
         uuid_from_process_id = uuid5(json_file.metadata_id)
         new_uuid = self.uuid_tracker.find_new_uuid(uuid_from_process_id)
         self.update_metadata_file(json_file, new_uuid)
+        self.replace_process_ids(json_file)
+
+    def replace_process_ids(self, json_file: JsonFile):
+        new_content = copy.deepcopy(json_file.new_content)
+        json_file.new_content = set_key(new_content, 'process_core.process_id', 'dummy_process')
+
