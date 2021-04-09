@@ -33,12 +33,6 @@ class PostProcessor:
         self.process_data_files(f'{self.project_dir_path}/data',
                                 DataProcessor(self.project_dir_path, self.new_dir_path, self.uuid_tracker))
 
-    def save_files(self):
-        for file_path in self.processed_files_by_file_path:
-            file: JsonFile = self.processed_files_by_file_path.get(file_path)
-            os.makedirs(file.new_dir_path, exist_ok=True)
-            dump_json(file.new_content, file.new_file_path)
-
     def process_json_files(self, dir_path: str, processor: JsonFileProcessor):
         json_files = self.find_json_files(dir_path)
         for json_file in json_files:
@@ -49,6 +43,12 @@ class PostProcessor:
         entity_files = (JsonFile(file_path) for file_path in get_json_file_paths(dir_path))
         return entity_files
 
+    def save_files(self):
+        for file_path in self.processed_files_by_file_path:
+            file: JsonFile = self.processed_files_by_file_path.get(file_path)
+            os.makedirs(file.new_dir_path, exist_ok=True)
+            dump_json(file.new_content, file.new_file_path)
+
     def process_data_files(self, dir_path: str, processor: DataProcessor):
         entity_files = self.find_data_files(dir_path)
         for entity_file in entity_files:
@@ -57,6 +57,8 @@ class PostProcessor:
     def find_data_files(self, dir_path: str) -> List['File']:
         entity_files = (File(file_path) for file_path in get_file_paths(dir_path))
         return entity_files
+
+
 
 
 if __name__ == '__main__':
