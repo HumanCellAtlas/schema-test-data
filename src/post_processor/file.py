@@ -1,6 +1,6 @@
 import os
 
-from src.post_processor.util import get_key, load_json
+from post_processor.util import get_key, load_json
 
 METADATA_ID_KEY_BY_TYPE = {
     'project': 'project_core.project_short_name',

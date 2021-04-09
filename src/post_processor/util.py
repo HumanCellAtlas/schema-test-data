@@ -27,7 +27,7 @@ def set_key(nested_dict: dict, path: str, value):
         content = content.get(sub_path)
 
     content[last_key] = value
-    return content
+    return nested_dict
 
 
 def load_json(file_path: str) -> dict:

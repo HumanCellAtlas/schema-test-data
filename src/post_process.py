@@ -3,11 +3,11 @@ import os
 
 from typing import List
 
-from src.post_processor.file import JsonFile, File
-from src.post_processor.file_processor import MetadataProcessor, DescriptorProcessor, LinkProcessor, \
+from post_processor.file import JsonFile, File
+from post_processor.file_processor import MetadataProcessor, DescriptorProcessor, LinkProcessor, \
     ProcessMetadataProcessor, DataProcessor, JsonFileProcessor
-from src.post_processor.util import get_json_file_paths, get_file_paths, dump_json
-from src.post_processor.uuid_tracker import UuidTracker
+from post_processor.util import get_json_file_paths, get_file_paths, dump_json
+from post_processor.uuid_tracker import UuidTracker
 
 
 class PostProcessor:
@@ -57,8 +57,6 @@ class PostProcessor:
     def find_data_files(self, dir_path: str) -> List['File']:
         entity_files = (File(file_path) for file_path in get_file_paths(dir_path))
         return entity_files
-
-
 
 
 if __name__ == '__main__':

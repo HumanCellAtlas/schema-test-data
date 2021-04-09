@@ -4,9 +4,9 @@ from abc import abstractmethod
 from shutil import copyfile
 
 
-from src.post_processor.file import File, JsonFile
-from src.post_processor.util import uuid5, get_key, set_key
-from src.post_processor.uuid_tracker import UuidTracker
+from post_processor.file import File, JsonFile
+from post_processor.util import uuid5, get_key, set_key
+from post_processor.uuid_tracker import UuidTracker
 
 
 ZERO_TIMESTAMP = '2021-01-01T00:00:00.000000Z'
@@ -49,6 +49,7 @@ class JsonFileProcessor(FileProcessor):
         described_by = get_key('describedBy', new_content)
         new_described_by = described_by.replace(SCHEMA_PROD_URL, SCHEMA_STAGING_URL)
         set_key(new_content, 'describedBy', new_described_by)
+        return new_content
 
 
 class MetadataProcessor(JsonFileProcessor):
@@ -68,6 +69,7 @@ class MetadataProcessor(JsonFileProcessor):
 
         new_filename = self.replace_uuid_and_version_in_filename(json_file)
         new_content = self.replace_uuid_and_version_in_content(json_file)
+        new_content = self.replace_described_by(new_content)
         new_dir_path = self.get_new_dir_path(json_file.dir_path)
         new_file_path = os.path.join(new_dir_path, new_filename)
 
@@ -85,7 +87,6 @@ class MetadataProcessor(JsonFileProcessor):
         set_key(new_content, 'provenance.document_id', json_file.new_entity_uuid)
         set_key(new_content, 'provenance.submission_date', ZERO_TIMESTAMP)
         set_key(new_content, 'provenance.update_date', ZERO_TIMESTAMP)
-        self.replace_described_by(new_content)
         return new_content
 
 
