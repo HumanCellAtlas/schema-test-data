@@ -39,6 +39,7 @@ def load_json(file_path: str) -> dict:
 def dump_json(content: dict, file_path: str):
     with open(file_path, 'w') as outfile:
         json.dump(content, outfile, indent=4, sort_keys=True)
+        outfile.write("\n")
 
 
 def uuid5(name):
