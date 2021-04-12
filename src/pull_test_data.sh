@@ -65,20 +65,18 @@ if [ $valid = true ] & [ $status -lt 400 ]
 
         mv temp_data/* ../tests/
 
-        rm -r temp_data
-
         cd ..
 
         rm -r temp_data
 
-        #git add .
+        git add .
 
-        #echo "Creating a new branch with name 'release-data-$today'"
+        echo "Creating a new branch with name 'release-data-$today'"
 
-        #git add $PARENTDIR/.
-        #git commit -m "Added new data, corresponding to release on $today"
-        #git push origin release-data-$today
-        #echo "Please go to the following website and fill in the details of the PR: https://github.com/HumanCellAtlas/schema-test-data/compare/master...release-data-$today"
+        git add $PARENTDIR/.
+        git commit -m "Added new data, corresponding to release on $today"
+        git push origin release-data-$today
+        echo "Please go to the following website and fill in the details of the PR: https://github.com/HumanCellAtlas/schema-test-data/compare/master...release-data-$today"
 
 
     else

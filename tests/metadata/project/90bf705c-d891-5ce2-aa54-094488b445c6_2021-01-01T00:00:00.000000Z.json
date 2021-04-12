@@ -13,7 +13,15 @@
             }
         }
     ],
-    "describedBy": "https://schema.staging.data.humancellatlas.org/type/project/14.1.0/project",
+    "dbgap_accessions": [
+        "phs001997.v1.p1",
+        "phs001836"
+    ],
+    "describedBy": "https://schema.staging.data.humancellatlas.org/type/project/14.2.0/project",
+    "ega_accessions": [
+        "EGAS00000000001",
+        "EGAD00000000002"
+    ],
     "funders": [
         {
             "grant_id": "WT211276/Z/18/Z",
@@ -88,7 +96,7 @@
     "provenance": {
         "document_id": "90bf705c-d891-5ce2-aa54-094488b445c6",
         "schema_major_version": 14,
-        "schema_minor_version": 1,
+        "schema_minor_version": 2,
         "submission_date": "2021-01-01T00:00:00.000000Z",
         "update_date": "2021-01-01T00:00:00.000000Z"
     },
