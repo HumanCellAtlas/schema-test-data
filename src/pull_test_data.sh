@@ -57,7 +57,7 @@ if [ $valid = true ] & [ $status -lt 400 ]
 
         cd ../src
 
-        python3 post_processor.py ../temp_data
+        python3 post_process.py ../temp_data
 
         rm -r ../tests
 
