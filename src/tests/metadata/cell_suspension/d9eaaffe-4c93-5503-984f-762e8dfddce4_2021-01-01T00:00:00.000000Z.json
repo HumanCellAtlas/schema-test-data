@@ -1,6 +1,6 @@
 {
     "biomaterial_core": {
-        "biomaterial_id": "AP2CS",
+        "biomaterial_id": "AP1CS",
         "ncbi_taxon_id": [
             9606
         ]
@@ -15,7 +15,7 @@
         }
     ],
     "provenance": {
-        "document_id": "af3549f4-8632-58c2-9821-c6249c622b0a",
+        "document_id": "d9eaaffe-4c93-5503-984f-762e8dfddce4",
         "schema_major_version": 13,
         "schema_minor_version": 3,
         "submission_date": "2021-01-01T00:00:00.000000Z",

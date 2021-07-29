@@ -1,0 +1,21 @@
+{
+    "describedBy": "https://schema.staging.data.humancellatlas.org/type/protocol/biomaterial_collection/6.2.0/dissociation_protocol",
+    "method": {
+        "ontology": "EFO:0009121",
+        "ontology_label": "blood draw",
+        "text": "blood draw"
+    },
+    "protocol_core": {
+        "protocol_description": "Testing subgraph shapes",
+        "protocol_id": "Combined_dissociation",
+        "protocol_name": "combined dissociation protocol"
+    },
+    "provenance": {
+        "document_id": "3c51b7f3-5cea-50a6-984d-a04b55bf5d23",
+        "schema_major_version": 6,
+        "schema_minor_version": 2,
+        "submission_date": "2021-01-01T00:00:00.000000Z",
+        "update_date": "2021-01-01T00:00:00.000000Z"
+    },
+    "schema_type": "protocol"
+}

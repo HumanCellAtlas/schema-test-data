@@ -1,7 +1,7 @@
 {
     "biomaterial_core": {
-        "biomaterial_id": "AP2_specimen",
-        "biomaterial_name": "AP2_specimen",
+        "biomaterial_id": "AP1_specimen",
+        "biomaterial_name": "AP1_specimen",
         "ncbi_taxon_id": [
             9606
         ]
@@ -27,7 +27,7 @@
         "text": "blood"
     },
     "provenance": {
-        "document_id": "3bee0c9a-aced-52f2-b97f-89518f826b36",
+        "document_id": "224d3750-f1f7-5b04-bbce-e23f09eea7d7",
         "schema_major_version": 10,
         "schema_minor_version": 4,
         "submission_date": "2021-01-01T00:00:00.000000Z",

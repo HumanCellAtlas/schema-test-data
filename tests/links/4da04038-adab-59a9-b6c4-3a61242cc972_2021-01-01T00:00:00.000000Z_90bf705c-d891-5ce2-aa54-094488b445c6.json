@@ -42,9 +42,13 @@
                     "output_type": "cell_suspension"
                 }
             ],
-            "process_id": "e18171e4-1780-50f9-bd0f-4cbc28d3f642",
+            "process_id": "370b930c-84dd-57c2-8c5f-03525d237d9d",
             "process_type": "process",
             "protocols": [
+                {
+                    "protocol_id": "3c51b7f3-5cea-50a6-984d-a04b55bf5d23",
+                    "protocol_type": "dissociation_protocol"
+                },
                 {
                     "protocol_id": "9462efe9-1b1a-5a18-81bb-e510137ae743",
                     "protocol_type": "enrichment_protocol"

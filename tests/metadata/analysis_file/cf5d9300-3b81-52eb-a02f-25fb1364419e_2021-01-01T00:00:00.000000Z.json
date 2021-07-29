@@ -9,10 +9,8 @@
             }
         ],
         "file_name": "AP1_file.h5ad",
-        "file_source": "Contributor",
-        "format": "h5ad"
+        "format": ".h5ad"
     },
-    "matrix_cell_count": 2100,
     "provenance": {
         "document_id": "cf5d9300-3b81-52eb-a02f-25fb1364419e",
         "schema_major_version": 6,
