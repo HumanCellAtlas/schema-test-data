@@ -8,13 +8,13 @@
                 "text": "count matrix"
             }
         ],
-        "file_name": "AP1_file.h5ad",
+        "file_name": "AP2_file.h5ad",
         "file_source": "Contributor",
         "format": "h5ad"
     },
-    "matrix_cell_count": 2100,
+    "matrix_cell_count": 15000,
     "provenance": {
-        "document_id": "cf5d9300-3b81-52eb-a02f-25fb1364419e",
+        "document_id": "f0c8ac7c-1c4a-5c9c-9286-c8b16208f9ae",
         "schema_major_version": 6,
         "schema_minor_version": 3,
         "submission_date": "2021-01-01T00:00:00.000000Z",
