@@ -13,7 +13,15 @@
             }
         }
     ],
+    "dbgap_accessions": [
+        "phs001997.v1.p1",
+        "phs001836"
+    ],
     "describedBy": "https://schema.staging.data.humancellatlas.org/type/project/14.3.0/project",
+    "ega_accessions": [
+        "EGAS00000000001",
+        "EGAD00000000002"
+    ],
     "estimated_cell_count": 10000,
     "funders": [
         {
