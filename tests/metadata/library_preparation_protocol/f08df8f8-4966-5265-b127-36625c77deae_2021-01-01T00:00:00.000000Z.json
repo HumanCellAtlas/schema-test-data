@@ -10,8 +10,8 @@
         "text": "polyA RNA"
     },
     "library_construction_method": {
-        "ontology": "EFO:0009898",
-        "ontology_label": "10x v3 sequencing",
+        "ontology": "EFO:0009922",
+        "ontology_label": "10x 3' v3",
         "text": "10xV3"
     },
     "nucleic_acid_source": "single cell",
