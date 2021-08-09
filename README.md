@@ -10,17 +10,17 @@ This repository is for the test [meta]data associated with the latest updates of
 4. Export the data and metadata.
 
 
-3. Copy the Project UUID of the exported project. 
-4. Run the pull_test_data.sh script using the following command: 
+5. Copy the Project UUID of the exported project. 
+6. Run the pull_test_data.sh script using the following command: 
 
   sh pull_test_data.sh 
 
 When asked for a project UUID, enter the project uuid of the exported project. Running this script generates a new branch of the schema-test-data repo titled release-data-[date]. This new branch has the data of the exported project in its ‘tests’ folder. 
 
-5. Switch to this branch, and run the post_process.py script using the following command, passing the argument of the ‘tests’ folder:
-
-python3 post_process.py [schema-test-data/tests]
-
-6. Push the changes made to this branch to Github
-7. Create a PR from the branch to master - this will include the modified test data, and the diff should show only the files that have been changed as a result of the metadata schema change 
-8. Ensure you update the excel spreadsheet located in the schema-test-data repo with the up-to-date modified spreadsheet for the next cycle of generating test data 
+7. Switch to this branch, and run the post_process.py script using the following command, passing the argument of the ‘tests’ folder:
+    ```
+    python3 post_process.py [schema-test-data/tests]
+    ```
+8. Push the changes made to this branch to Github
+9. Create a PR from the branch to master - this will include the modified test data, and the diff should show only the files that have been changed as a result of the metadata schema change 
+10. Ensure you update the excel spreadsheet located in the schema-test-data repo with the up-to-date modified spreadsheet for the next cycle of generating test data 
