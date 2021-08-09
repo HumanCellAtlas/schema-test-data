@@ -4,11 +4,10 @@ This repository is for the test [meta]data associated with the latest updates of
 # Brief SOP on generating test data 
 
 1. Download the excel spreadsheet located in this folder (schema_test_data.xlsx) and modify it to include the new metadata-schema changes. 
-2. Use the modified excel spreadsheet to generate a new project in ingest. The necessary analysis_files are located in the below hca-util area. Sync the files to the S3 bucket, and export the data and metadata to the staging area. 
+2. Use the modified excel spreadsheet to create a new project in the [staging environment in ingest](staging.contribute.data.humancellatlas.org). The necessary analysis_files are located in an hca-util area, obtainable by executing the following command: `hca-util list -b | grep "schema-test-data"`
 
-Created upload area with UUID 428794cc-cec2-4a98-8649-76accda2304f and name schema-test-data
-- 428794cc-cec2-4a98-8649-76accda2304f/AP1_file.h5ad
-- 428794cc-cec2-4a98-8649-76accda2304f/AP2_file.h5ad
+3. Wait until the metadata is validated, select the upload area and sync the files to the new submission.
+4. Export the data and metadata.
 
 
 3. Copy the Project UUID of the exported project. 
