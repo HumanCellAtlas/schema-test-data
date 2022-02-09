@@ -14,8 +14,6 @@
     },
     "diseases": [
         {
-            "ontology": "MONDO:0100096",
-            "ontology_label": "COVID-19",
             "text": "COVID-19"
         }
     ],

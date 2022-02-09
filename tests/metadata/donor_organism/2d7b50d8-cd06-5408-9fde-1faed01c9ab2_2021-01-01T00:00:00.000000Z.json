@@ -1,7 +1,7 @@
 {
     "biomaterial_core": {
-        "biomaterial_id": "AP2",
-        "biomaterial_name": "Sanger_AP2",
+        "biomaterial_id": "AP3",
+        "biomaterial_name": "Sanger_AP3",
         "ncbi_taxon_id": [
             9606
         ]
@@ -32,7 +32,7 @@
         "text": "year"
     },
     "provenance": {
-        "document_id": "5bc2bf2f-eb98-5510-a386-172cef38f2f2",
+        "document_id": "2d7b50d8-cd06-5408-9fde-1faed01c9ab2",
         "schema_major_version": 15,
         "schema_minor_version": 5,
         "submission_date": "2021-01-01T00:00:00.000000Z",
