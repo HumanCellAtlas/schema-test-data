@@ -4,7 +4,7 @@
         "barcode_offset": 0,
         "barcode_read": "Read 1"
     },
-    "describedBy": "https://schema.staging.data.humancellatlas.org/type/protocol/sequencing/6.2.0/library_preparation_protocol",
+    "describedBy": "https://schema.staging.data.humancellatlas.org/type/protocol/sequencing/6.3.1/library_preparation_protocol",
     "end_bias": "3 prime tag",
     "input_nucleic_acid_molecule": {
         "text": "polyA RNA"
@@ -23,7 +23,7 @@
     "provenance": {
         "document_id": "767282b2-2fc1-5559-b020-29686b810206",
         "schema_major_version": 6,
-        "schema_minor_version": 2,
+        "schema_minor_version": 3,
         "submission_date": "2021-01-01T00:00:00.000000Z",
         "update_date": "2021-01-01T00:00:00.000000Z"
     },

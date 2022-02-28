@@ -1,0 +1,19 @@
+{
+    "biomaterial_core": {
+        "biomaterial_id": "AP3_imagedspecimen",
+        "biomaterial_name": "AP3_imagedspecimen",
+        "ncbi_taxon_id": [
+            9606
+        ]
+    },
+    "describedBy": "https://schema.staging.data.humancellatlas.org/type/biomaterial/3.3.0/imaged_specimen",
+    "provenance": {
+        "document_id": "0bf91a05-85df-5d7d-bcc0-a625c5921de2",
+        "schema_major_version": 3,
+        "schema_minor_version": 3,
+        "submission_date": "2021-01-01T00:00:00.000000Z",
+        "update_date": "2021-01-01T00:00:00.000000Z"
+    },
+    "schema_type": "biomaterial",
+    "slice_thickness": 10.0
+}
