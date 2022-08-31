@@ -1,0 +1,40 @@
+{
+    "describedBy": "https://schema.staging.data.humancellatlas.org/type/protocol/sequencing/6.3.1/library_preparation_protocol",
+    "end_bias": "3 prime end bias",
+    "input_nucleic_acid_molecule": {
+        "ontology": "OBI:0000869",
+        "ontology_label": "polyA RNA",
+        "text": "polyA RNA"
+    },
+    "library_construction_method": {
+        "ontology": "EFO:0010961",
+        "ontology_label": "Visium Spatial Gene Expression",
+        "text": "Visium Spatial Gene Expression"
+    },
+    "nominal_length": 350,
+    "nominal_sdev": 50,
+    "nucleic_acid_source": "single nucleus",
+    "protocol_core": {
+        "protocol_description": "The Visium spatial gene expression protocol from 10X Genomics was performed using Library Preparation slide and following the manufacturer\u2019s protocol.After transcript capture, Visium Library Preparation Protocol from 10x Genomics was performed.",
+        "protocol_id": "HumanVisiumLibraryPrep"
+    },
+    "provenance": {
+        "document_id": "83f14748-af1c-57aa-9088-6cb1cdd4bba4",
+        "schema_major_version": 6,
+        "schema_minor_version": 3,
+        "submission_date": "2021-01-01T00:00:00.000000Z",
+        "update_date": "2021-01-01T00:00:00.000000Z"
+    },
+    "schema_type": "protocol",
+    "spatial_barcode": {
+        "barcode_length": 16,
+        "barcode_offset": 0,
+        "barcode_read": "Read 1"
+    },
+    "strand": "second",
+    "umi_barcode": {
+        "barcode_length": 12,
+        "barcode_offset": 16,
+        "barcode_read": "Read 1"
+    }
+}

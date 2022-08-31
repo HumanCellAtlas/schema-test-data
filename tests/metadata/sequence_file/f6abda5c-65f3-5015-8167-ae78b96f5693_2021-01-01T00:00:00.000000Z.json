@@ -1,0 +1,16 @@
+{
+    "describedBy": "https://schema.staging.data.humancellatlas.org/type/file/9.4.0/sequence_file",
+    "file_core": {
+        "file_name": "6330STDY9479159_S1_L001_R2_001.fastq.gz",
+        "format": "fastq.gz"
+    },
+    "provenance": {
+        "document_id": "f6abda5c-65f3-5015-8167-ae78b96f5693",
+        "schema_major_version": 9,
+        "schema_minor_version": 4,
+        "submission_date": "2021-01-01T00:00:00.000000Z",
+        "update_date": "2021-01-01T00:00:00.000000Z"
+    },
+    "read_index": "read2",
+    "schema_type": "file"
+}

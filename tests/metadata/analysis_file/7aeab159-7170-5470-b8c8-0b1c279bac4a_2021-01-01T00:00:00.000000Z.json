@@ -1,0 +1,23 @@
+{
+    "describedBy": "https://schema.staging.data.humancellatlas.org/type/file/6.4.0/analysis_file",
+    "file_core": {
+        "content_description": [
+            {
+                "ontology": "data:3917",
+                "ontology_label": "count matrix",
+                "text": "count matrix"
+            }
+        ],
+        "file_name": "AP5_file.h5ad",
+        "file_source": "Contributor",
+        "format": "h5ad"
+    },
+    "provenance": {
+        "document_id": "7aeab159-7170-5470-b8c8-0b1c279bac4a",
+        "schema_major_version": 6,
+        "schema_minor_version": 4,
+        "submission_date": "2021-01-01T00:00:00.000000Z",
+        "update_date": "2021-01-01T00:00:00.000000Z"
+    },
+    "schema_type": "file"
+}
