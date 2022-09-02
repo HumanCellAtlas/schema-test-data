@@ -1,0 +1,32 @@
+{
+    "biomaterial_core": {
+        "biomaterial_id": "AP5CS",
+        "ncbi_taxon_id": [
+            9606
+        ]
+    },
+    "describedBy": "https://schema.staging.data.humancellatlas.org/type/biomaterial/13.3.0/cell_suspension",
+    "estimated_cell_count": 20000,
+    "genus_species": [
+        {
+            "ontology": "NCBITaxon:9606",
+            "ontology_label": "Homo sapiens",
+            "text": "Homo sapiens"
+        }
+    ],
+    "provenance": {
+        "document_id": "fc4a8b6c-3201-51ec-99c2-f094e93377ef",
+        "schema_major_version": 13,
+        "schema_minor_version": 3,
+        "submission_date": "2021-01-01T00:00:00.000000Z",
+        "update_date": "2021-01-01T00:00:00.000000Z"
+    },
+    "schema_type": "biomaterial",
+    "selected_cell_types": [
+        {
+            "ontology": "CL:2000001",
+            "ontology_label": "peripheral blood mononuclear cell",
+            "text": "peripheral blood mononuclear cell"
+        }
+    ]
+}
