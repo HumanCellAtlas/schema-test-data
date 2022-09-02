@@ -1,0 +1,14 @@
+{
+    "content_type": "application/gzip; dcp-type=data",
+    "crc32c": "4dab8938",
+    "describedBy": "https://schema.staging.data.humancellatlas.org/system/2.0.0/file_descriptor",
+    "file_id": "7aeab159-7170-5470-b8c8-0b1c279bac4a",
+    "file_name": "AP5_file.h5ad",
+    "file_version": "2021-01-01T00:00:00.000000Z",
+    "s3_etag": "4f8d6d3deb56b7abd78e987b4f3ae1ee",
+    "schema_type": "file_descriptor",
+    "schema_version": "2.0.0",
+    "sha1": "0f65039a19b5b721d5f9d3500bb434b51dbf81f6",
+    "sha256": "73eece65dc9b78a90a51e5aa462365cc1c367fbe7dfdf8f36ec67d890194fcd9",
+    "size": 143
+}
