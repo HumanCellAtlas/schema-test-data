@@ -1,3 +1,6 @@
+# The branch protection rule require reviews from the people on this list.
+# see List in https://github.com/HumanCellAtlas/dcp2/blob/main/docs/dcp2_operating_procedures.rst#designated-reviewers
+
 * @amnonkhen       # Amnon (EBI)
 * @ESapenaVentura  # Enrique (EBI)
 * @hannes-ucsc     # Hannes (UCSC)
