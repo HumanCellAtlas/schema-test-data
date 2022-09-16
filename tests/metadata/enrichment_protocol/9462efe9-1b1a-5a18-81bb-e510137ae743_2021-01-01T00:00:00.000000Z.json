@@ -1,0 +1,20 @@
+{
+    "describedBy": "https://schema.staging.data.humancellatlas.org/type/protocol/biomaterial_collection/3.1.0/enrichment_protocol",
+    "method": {
+        "ontology": "EFO:0009112",
+        "ontology_label": "density gradient centrifugation",
+        "text": "density gradient centrifugation"
+    },
+    "protocol_core": {
+        "protocol_description": "Newcastle: PBMCs were isolated from blood samples using Lymphoprep (StemCell Technologies) density gradient centrifugation as per manufacturer's instructions. Single cell suspensions were then washed with Dulbecco's phosphate buffered saline (PBS)(Sigma) and frozen in 5-10 million cell aliquots in 90% (v/v) heat inactivated fetal calf serum (FCS) (Gibco) 10% (v/v) DMSO (Sigma Aldrich). On the day of the experiment the cells were thawed for 1 minute, transferred to Wash buffer (PBS supplemented with 2% (v/v) FCS and 2mM EDTA), and centrifuged at 500g  for 5 minutes.",
+        "protocol_id": "Newcastle_Enrichment_Centrifuge"
+    },
+    "provenance": {
+        "document_id": "9462efe9-1b1a-5a18-81bb-e510137ae743",
+        "schema_major_version": 3,
+        "schema_minor_version": 1,
+        "submission_date": "2021-01-01T00:00:00.000000Z",
+        "update_date": "2021-01-01T00:00:00.000000Z"
+    },
+    "schema_type": "protocol"
+}
