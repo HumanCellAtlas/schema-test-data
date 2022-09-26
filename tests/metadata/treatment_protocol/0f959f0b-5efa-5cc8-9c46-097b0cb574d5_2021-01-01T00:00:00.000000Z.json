@@ -1,0 +1,31 @@
+{
+    "describedBy": "https://schema.staging.data.humancellatlas.org/type/protocol/biomaterial_collection/1.0.0/treatment_protocol",
+    "media": "RPMI 1640",
+    "method": [
+        {
+            "ontology": "EFO:0030037",
+            "ontology_label": "T cell activation assay",
+            "text": "T cell activation assay"
+        }
+    ],
+    "protocol_core": {
+        "protocol_description": "Cells were incubated with a culture media containing an activator agent, mimicking the natural activation and expansion process.",
+        "protocol_id": "treatment_protocol",
+        "protocol_name": "treatment protocol"
+    },
+    "provenance": {
+        "document_id": "0f959f0b-5efa-5cc8-9c46-097b0cb574d5",
+        "schema_major_version": 1,
+        "schema_minor_version": 0,
+        "submission_date": "2021-01-01T00:00:00.000000Z",
+        "update_date": "2021-01-01T00:00:00.000000Z"
+    },
+    "schema_type": "protocol",
+    "target_pathway": [
+        {
+            "ontology": "GO:0050870",
+            "ontology_label": "positive regulation of T cell activation",
+            "text": "positive regulation of T cell activation"
+        }
+    ]
+}

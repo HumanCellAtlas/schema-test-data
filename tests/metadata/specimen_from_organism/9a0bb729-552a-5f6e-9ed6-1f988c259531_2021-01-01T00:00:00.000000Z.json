@@ -6,7 +6,7 @@
             9606
         ]
     },
-    "describedBy": "https://schema.staging.data.humancellatlas.org/type/biomaterial/10.4.0/specimen_from_organism",
+    "describedBy": "https://schema.staging.data.humancellatlas.org/type/biomaterial/10.5.0/specimen_from_organism",
     "diseases": [
         {
             "ontology": "MONDO:0100096",
@@ -29,7 +29,7 @@
     "provenance": {
         "document_id": "9a0bb729-552a-5f6e-9ed6-1f988c259531",
         "schema_major_version": 10,
-        "schema_minor_version": 4,
+        "schema_minor_version": 5,
         "submission_date": "2021-01-01T00:00:00.000000Z",
         "update_date": "2021-01-01T00:00:00.000000Z"
     },

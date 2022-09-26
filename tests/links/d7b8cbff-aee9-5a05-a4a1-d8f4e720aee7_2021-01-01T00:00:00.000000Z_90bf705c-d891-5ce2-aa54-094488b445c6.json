@@ -1,5 +1,5 @@
 {
-    "describedBy": "https://schema.staging.data.humancellatlas.org/system/3.0.0/links",
+    "describedBy": "https://schema.staging.data.humancellatlas.org/system/3.1.0/links",
     "links": [
         {
             "inputs": [
@@ -42,12 +42,16 @@
                     "output_type": "cell_suspension"
                 }
             ],
-            "process_id": "a3843530-046c-5ec0-bbf4-a4f0929b60af",
+            "process_id": "c352fa85-1de7-5ec1-9ecc-3f283cad54ca",
             "process_type": "process",
             "protocols": [
                 {
                     "protocol_id": "46435803-7ee8-5157-8569-8a61ad50c315",
                     "protocol_type": "enrichment_protocol"
+                },
+                {
+                    "protocol_id": "0f959f0b-5efa-5cc8-9c46-097b0cb574d5",
+                    "protocol_type": "treatment_protocol"
                 }
             ]
         },
@@ -76,5 +80,5 @@
         }
     ],
     "schema_type": "links",
-    "schema_version": "3.0.0"
+    "schema_version": "3.1.0"
 }

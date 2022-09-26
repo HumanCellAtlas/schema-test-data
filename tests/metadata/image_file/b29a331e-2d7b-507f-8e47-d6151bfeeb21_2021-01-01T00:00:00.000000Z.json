@@ -1,5 +1,5 @@
 {
-    "describedBy": "https://schema.staging.data.humancellatlas.org/type/file/2.3.0/image_file",
+    "describedBy": "https://schema.staging.data.humancellatlas.org/type/file/2.5.0/image_file",
     "file_core": {
         "content_description": [
             {
@@ -15,7 +15,7 @@
     "provenance": {
         "document_id": "b29a331e-2d7b-507f-8e47-d6151bfeeb21",
         "schema_major_version": 2,
-        "schema_minor_version": 3,
+        "schema_minor_version": 5,
         "submission_date": "2021-01-01T00:00:00.000000Z",
         "update_date": "2021-01-01T00:00:00.000000Z"
     },
