@@ -1,0 +1,14 @@
+{
+    "content_type": "application/gzip; dcp-type=data",
+    "crc32c": "f245e99b",
+    "describedBy": "https://schema.staging.data.humancellatlas.org/system/2.0.0/file_descriptor",
+    "file_id": "de17aa7d-be28-53c1-b7a3-1f4b3989e3e6",
+    "file_name": "Test_S1_L001_R1_001.fastq.gz",
+    "file_version": "2021-01-01T00:00:00.000000Z",
+    "s3_etag": "d829f2c9e30ce1eddaa495b9840609d5",
+    "schema_type": "file_descriptor",
+    "schema_version": "2.0.0",
+    "sha1": "5bd380c06a83b5681e5ebfa36410f74f6eaf268b",
+    "sha256": "9a8376dfff7b6795b09a2c579e41f0f34079268fbda69aec8c9e99f0062fc94b",
+    "size": 275
+}
