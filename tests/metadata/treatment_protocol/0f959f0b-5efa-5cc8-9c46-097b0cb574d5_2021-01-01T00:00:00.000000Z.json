@@ -1,6 +1,5 @@
 {
     "describedBy": "https://schema.staging.data.humancellatlas.org/type/protocol/biomaterial_collection/1.0.0/treatment_protocol",
-    "media": "RPMI 1640",
     "method": [
         {
             "ontology": "EFO:0030037",
