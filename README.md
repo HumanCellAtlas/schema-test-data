@@ -3,7 +3,7 @@ This repository is for the test [meta]data associated with the latest updates of
 
 # Brief SOP on generating test data 
 
-1. Download the excel spreadsheet located in this folder (schema_test_data.xlsx) and modify it to include the new metadata-schema changes. 
+1. Download the excel spreadsheet located in this folder (schema_test_data.xlsx) and modify it to include the new metadata-schema changes. **PLEASE REMEMBER TO INCLUDE THE NEW DATA (IF ANY) IN THE HCA-UTIL AREA STATED IN THE NEXT STEP**
 2. Use the modified excel spreadsheet to create a new project in the [staging environment in ingest](https://staging.contribute.data.humancellatlas.org). The necessary analysis_files are located in an hca-util area, obtainable by executing the following command: `hca-util list -b | grep "schema-test-data"`
 
 3. Wait until the metadata is validated, select the upload area and sync the files to the new submission.
