@@ -29,6 +29,6 @@ When asked for a project UUID, enter the project uuid of the exported project. R
 8. A new folder within `src/` will be created, called `tests`. Delete the root `tests` folder and move the `src/tests` folder to the root of the repository
 9. Delete the newly created `src/temp_data` folder
 10. Push the changes made to this branch to Github
-11. Ensure you update the excel spreadsheet located in the schema-test-data repo with the up-to-date modified spreadsheet for the next cycle of generating test data 
+11. Ensure you update the excel spreadsheet (Schema_Test_Data.xlsx) located in the schema-test-data repo with the up-to-date modified spreadsheet for the next cycle of generating test data 
 12. Create a PR from the branch to master - this will include the modified test data, and the diff should show only the files that have been changed as a result of the metadata schema change.
 Include in the PR a description of what the test data is being used for and reference to the issue it's addressing
