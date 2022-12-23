@@ -3,7 +3,7 @@ This repository is for the test [meta]data associated with the latest updates of
 
 # Brief SOP on generating test data 
 
-1. Download the excel spreadsheet located in this folder (schema_test_data.xlsx) and modify it to include the new metadata-schema changes.
+1. Download the excel spreadsheet located in this folder ([Schema_Test_Data.xlsx](./Schema_Test_Data.xlsx)) and modify it to include the new metadata-schema changes.
 If you are adding new data:
 - **PLEASE REMEMBER TO INCLUDE THE NEW DATA IN THE HCA-UTIL AREA STATED IN THE NEXT STEP**
 - use dummy files for fastqs, for example a copy of an existing one (see step 2)
