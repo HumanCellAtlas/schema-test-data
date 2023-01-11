@@ -31,8 +31,8 @@
         {
             "inputs": [
                 {
-                    "input_id": "3bee0c9a-aced-52f2-b97f-89518f826b36",
-                    "input_type": "specimen_from_organism"
+                    "input_id": "119c4135-7b77-5003-a150-f052e22c6834",
+                    "input_type": "cell_suspension"
                 }
             ],
             "link_type": "process_link",
@@ -42,16 +42,35 @@
                     "output_type": "cell_suspension"
                 }
             ],
-            "process_id": "c352fa85-1de7-5ec1-9ecc-3f283cad54ca",
+            "process_id": "b8ec88d7-675c-54ff-8071-63255adc181b",
+            "process_type": "process",
+            "protocols": [
+                {
+                    "protocol_id": "0f959f0b-5efa-5cc8-9c46-097b0cb574d5",
+                    "protocol_type": "treatment_protocol"
+                }
+            ]
+        },
+        {
+            "inputs": [
+                {
+                    "input_id": "3bee0c9a-aced-52f2-b97f-89518f826b36",
+                    "input_type": "specimen_from_organism"
+                }
+            ],
+            "link_type": "process_link",
+            "outputs": [
+                {
+                    "output_id": "119c4135-7b77-5003-a150-f052e22c6834",
+                    "output_type": "cell_suspension"
+                }
+            ],
+            "process_id": "bd6a4a38-c44b-5d17-b2b1-d0d4c4531bf0",
             "process_type": "process",
             "protocols": [
                 {
                     "protocol_id": "46435803-7ee8-5157-8569-8a61ad50c315",
                     "protocol_type": "enrichment_protocol"
-                },
-                {
-                    "protocol_id": "0f959f0b-5efa-5cc8-9c46-097b0cb574d5",
-                    "protocol_type": "treatment_protocol"
                 }
             ]
         },
